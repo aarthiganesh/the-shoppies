@@ -44,13 +44,10 @@ function App() {
 	};
 
 	const addNomination = (movie) => {
-		console.log(nominations);
-		console.log(movie);
-		console.log(!nominations.includes(movie));
 
 		//Brute force .includes() method
 
-		var isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!=0;
+		let isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!=0;
 
 		if(!isInNominations){
 			const newNominationList = [...nominations, movie];
@@ -80,7 +77,7 @@ function App() {
 			</section>
 			<div id="test">
 				<section className="search-results">
-					<h3>Search Results for '{searchValue}'</h3>
+					<h3 className="section-title">Search Results for '{searchValue}'</h3>
 					<SearchResults
 							movies={movies}
 							handleNominateClick={addNomination}
@@ -88,7 +85,7 @@ function App() {
 					/>
 				</section>
 				<section className="search-results">
-					<h3>Nominated Movies</h3>
+					<h3 className="section-title">Nominated Movies</h3>
 					<NominatedMovies
 							movies={nominations}
 							handleNominateClick={removeNomination}

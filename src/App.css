@@ -3,6 +3,7 @@
 .App {
   padding:0;
   margin:0;
+  background-color: #F6F6FA;
 }
 
 h1{
@@ -18,7 +19,7 @@ header{
 }
 
 .search{
-  background: linear-gradient(#e66465, #fff);
+  background: #528AFA;
   text-align: center;
   padding: 100px 0 100px 0;
 }
@@ -28,6 +29,10 @@ header{
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
+
+  align-items: flex-start;
+  justify-content:flex-start;
+  align-content: flex-start;
 }
 
 .search-results h2{
@@ -39,25 +44,26 @@ header{
 }
 
 .movie{
-  background-color: beige;
+  background-color: white;
   width: 28%;
   border-radius: 10px;
   padding: 10px;
   margin: 1%;
   text-align: center;
+  block-size: fit-content;
 }
 
 button{
   padding:10px;
   color: white;
-  background-color: blue;
+  background-color: #528AFA;
   border: none;
   border-radius: 10px;
 }
 
 button:disabled{
   padding:10px;
-  color: blue;
+  color: #528AFA;
   background-color: white;
   border: none;
   border-radius: 10px;
@@ -68,4 +74,8 @@ button:disabled{
   border-radius: 20px;
   border: none;
   width: 50%;
+}
+
+.section-title{
+  width: 100%;
 }

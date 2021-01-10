@@ -5,11 +5,10 @@ const SearchResults = (props) => {
 
 	//Brute force .includes() method
 		
-	var isInNominations = false;
 
 	function NominateButton (props){
 		console.log (props)
-		var isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!=0;
+		let isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!=0;
 
 		if(!isInNominations){
 			return(
