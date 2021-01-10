@@ -92,13 +92,13 @@ function App() {
 					nominations = {nominations}
 					searchValue = {searchValue}
 				/>
-				{/* <section className="search-results">
+				<section className="search-results">
 					<h3 className="section-title">Nominated Movies</h3>
 					<NominatedMovies
 							movies={nominations}
 							handleNominateClick={removeNomination}
 					/>
-				</section> */}
+				</section>
 			</div>
 			<section className="">
 
