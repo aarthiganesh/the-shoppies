@@ -161,3 +161,20 @@ nav{
   border-bottom: black solid 3px;
   border-radius: none;
 }
+
+/* Nomination Limit Banner */
+
+#nomination-limit-banner{
+  color: white;
+  background-color: rgb(248, 179, 101);
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  display: none;
+}
+
+#nomination-limit-banner p{
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 400;
+}

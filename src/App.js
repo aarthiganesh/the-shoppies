@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Search from './components/Search';
 import SearchResults from './components/SearchResults';
 import NominatedMovies from './components/NominatedMovies';
+import NominationLimitBanner from './components/NominationLimitBanner';
 
 function App() {
 	const [movies, setMovies] = useState([]);
@@ -33,6 +34,14 @@ function App() {
 		}
 	}, []);
 
+	useEffect(() => {
+		if(nominations.length<6){
+			return () => {
+				document.getElementById("nomination-limit-banner").style.setProperty('display','none');
+			}
+		}
+	}, [nominations])
+
 	const saveToLocalStorage = (items) => {
 		localStorage.setItem('shoppies-nominations', JSON.stringify(items));
 	};
@@ -42,7 +51,7 @@ function App() {
 		let isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!==0;
 
 		if(nominations.length===5){
-			alert('too many nominations')
+			document.getElementById("nomination-limit-banner").style.setProperty('display','block');
 		}else{
 			if(!isInNominations){
 				const newNominationList = [...nominations, movie];
@@ -71,6 +80,7 @@ function App() {
 			</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
 			</section>
+			<NominationLimitBanner />
 			<nav>
 			<button className="nav-link">Search Results</button>
 			<button className="nav-link">Your Nominations</button>
