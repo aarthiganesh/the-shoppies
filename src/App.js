@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import SearchResultsPage from './pages/SearchResultsPage';
 import Search from './components/Search';
-import SearchResults from './components/SearchResults';
 import NominatedMovies from './components/NominatedMovies';
 import NominationLimitBanner from './components/NominationLimitBanner';
 
@@ -86,22 +86,19 @@ function App() {
 			<button className="nav-link">Your Nominations</button>
 			</nav>
 			<div id="test">
-				<section className="search-results">
-					<h3 className="section-title">Search Results for '{searchValue}'</h3>
-					<SearchResults
-							movies={movies}
-							handleNominateClick={addNomination}
-							nominations = {nominations}
-					/>
-				</section>
-				<section className="search-results">
+				<SearchResultsPage 
+					movies = {movies}
+					addNomination = {addNomination}
+					nominations = {nominations}
+					searchValue = {searchValue}
+				/>
+				{/* <section className="search-results">
 					<h3 className="section-title">Nominated Movies</h3>
 					<NominatedMovies
 							movies={nominations}
 							handleNominateClick={removeNomination}
 					/>
-					
-				</section>
+				</section> */}
 			</div>
 			<section className="">
 
