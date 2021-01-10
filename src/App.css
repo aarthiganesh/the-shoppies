@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
 .App {
   padding:0;
@@ -14,6 +15,10 @@ h1{
   margin: 0;
 }
 
+h2, h3, h4{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 header{
   text-align: center;
 }
@@ -25,7 +30,7 @@ header{
 }
 
 .search-results{
-  width: 50%;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
@@ -51,23 +56,41 @@ header{
   margin: 1%;
   text-align: center;
   block-size: fit-content;
+  box-shadow: rgba(136, 136, 136, 0.05) 5px 5px 10px;
+  transition: box-shadow 500ms ease-in-out;
+}
+.movie:hover{
+  box-shadow: rgba(136, 136, 136, 0.15) 8px 8px 10px;
 }
 
-button{
+.movie-title{
+  color: rgb(32, 32, 32);
+}
+
+.btn-nominate{
   padding:10px;
   color: white;
   background-color: #528AFA;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 400ms ease-in-out;
 }
 
-button:disabled{
-  padding:10px;
+.btn-nominate:hover, .btn-nominate:focus{
+  background-color: #2a6ae9;
+}
+
+.btn-nominate-disabled{
+  padding: 10px;;
   color: #528AFA;
-  background-color: white;
+  background-color: #eff4ff;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
+
+
 
 #search-bar{
   padding: 10px;
@@ -78,4 +101,31 @@ button:disabled{
 
 .section-title{
   width: 100%;
+}
+
+.btn-remove{
+  padding: 10px;
+  color: #ffffff;
+  background-color: rgb(221, 86, 86);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 400ms ease-in-out;
+  
+}
+
+.btn-remove:hover, .btn-remove:focus{
+  background-color: rgb(199, 54, 54);
+}
+
+nav{
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.nav-link{
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: #528AFA solid 3px;
 }

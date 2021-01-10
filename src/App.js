@@ -14,10 +14,6 @@ function App() {
 		const response = await fetch(url);
 		const responseJson = await response.json();
 
-		console.log(searchValue);
-		console.log(url);
-		console.log(responseJson);
-
 		if (responseJson.Search) {
 			setMovies(responseJson.Search);
 		}
@@ -35,8 +31,6 @@ function App() {
 		if (nominationsList) {
 			setNominations(nominationsList);
 		}
-
-		console.log('nominations');
 	}, []);
 
 	const saveToLocalStorage = (items) => {
@@ -45,14 +39,16 @@ function App() {
 
 	const addNomination = (movie) => {
 
-		//Brute force .includes() method
+		let isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!==0;
 
-		let isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!=0;
-
-		if(!isInNominations){
-			const newNominationList = [...nominations, movie];
-			setNominations(newNominationList);
-			saveToLocalStorage(newNominationList);
+		if(nominations.length===5){
+			alert('too many nominations')
+		}else{
+			if(!isInNominations){
+				const newNominationList = [...nominations, movie];
+				setNominations(newNominationList);
+				saveToLocalStorage(newNominationList);
+			}
 		}
 	};
 
@@ -75,6 +71,10 @@ function App() {
 			</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
 			</section>
+			<nav>
+			<button className="nav-link">Search Results</button>
+			<button className="nav-link">Your Nominations</button>
+			</nav>
 			<div id="test">
 				<section className="search-results">
 					<h3 className="section-title">Search Results for '{searchValue}'</h3>

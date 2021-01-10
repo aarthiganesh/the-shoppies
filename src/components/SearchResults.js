@@ -7,18 +7,19 @@ const SearchResults = (props) => {
 		
 
 	function NominateButton (props){
-		console.log (props)
-		let isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!=0;
+		let isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!==0;
 
 		if(!isInNominations){
 			return(
 				<button
+					className="btn-nominate"
 					onClick={() => props.handleNominateClick(props.movie)}
 				>Nominate</button>
 			)
 		}else{
 			return (
-				<button disabled>Nominated</button>
+				<button disabled
+				className="btn-nominate-disabled">Nominated</button>
 			)
 		}
 	}
@@ -27,9 +28,9 @@ const SearchResults = (props) => {
 		<>
 			{props.movies.map((movie,index) => (
 				<div className="movie">
-					<p> 
+					<h4 class="movie-title"> 
 						{movie.Title} 
-					</p>
+					</h4>
 					<p>
 						{movie.Year}
 				</p>
