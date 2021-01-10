@@ -8,7 +8,7 @@ const NominatedMovies = (props) => {
 				<div className="movie">
 					<div className="movie-poster-crop">
 					<img 
-						src = {`http://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
+						src = {`https://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
 						alt={movie.Title} 
 						className="movie-poster"
 						/>
