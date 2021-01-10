@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Karla:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
 
 .App {
   padding:0;
@@ -21,12 +21,22 @@ h1{
   margin: 0;
 }
 
-h2, h3, h4{
+h4{
   /* font-family: 'Josefin Sans', sans-serif; */
-  font-family: 'Karla', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
-
+#instructions{
+  font-style: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem; 
+  padding-bottom: 20px;
+}
+#tagline{
+  font-weight: 700;
+  font-size: 2rem;
+}
 
 /* Search */
 .search{
@@ -37,6 +47,7 @@ h2, h3, h4{
 
 .search-results{
   width: 100vw;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
@@ -74,6 +85,7 @@ h2, h3, h4{
   block-size: fit-content;
   box-shadow: rgba(136, 136, 136, 0.05) 5px 5px 10px;
   transition: box-shadow 500ms ease-in-out;
+  min-width: 200px;
 }
 .movie:hover{
   box-shadow: rgba(136, 136, 136, 0.15) 8px 8px 10px;
@@ -81,7 +93,6 @@ h2, h3, h4{
 
 .movie-title{
   color: rgb(32, 32, 32);
-  height: 2.5em;
 }
 
 .movie-poster{

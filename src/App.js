@@ -1,8 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+// Pages
 import SearchResultsPage from './pages/SearchResultsPage';
+import NominatedMoviesPage from './pages/NominatedMoviesPage';
+// Components
 import Search from './components/Search';
-import NominatedMovies from './components/NominatedMovies';
 import NominationLimitBanner from './components/NominationLimitBanner';
 
 function App() {
@@ -75,33 +77,32 @@ function App() {
   return (
     <div className="App">
       <section className="search">
-			<header>
-      	<h1>The Shoppies</h1>
-			</header>
+				<header>
+					<h1>The Shoppies</h1>
+				</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
 			</section>
+
 			<NominationLimitBanner />
-			<nav>
-			<button className="nav-link">Search Results</button>
-			<button className="nav-link">Your Nominations</button>
-			</nav>
-			<div id="test">
+			
+			<section>
+				<nav>
+				<h2 id="tagline">Welcome to The Shoppies 2021</h2>
+				<p id="instructions">Using the search bar above, find your favourite movies of the year and nominate your top 5 for Shoppies 2021!</p>
+				</nav>
+			</section>
+
+			<section id="test">
 				<SearchResultsPage 
 					movies = {movies}
 					addNomination = {addNomination}
 					nominations = {nominations}
 					searchValue = {searchValue}
 				/>
-				<section className="search-results">
-					<h3 className="section-title">Nominated Movies</h3>
-					<NominatedMovies
-							movies={nominations}
-							handleNominateClick={removeNomination}
-					/>
-				</section>
-			</div>
-			<section className="">
-
+				<NominatedMoviesPage 
+						nominations ={nominations}
+						removeNomination={removeNomination}
+				/>
 			</section>
 
     </div>
