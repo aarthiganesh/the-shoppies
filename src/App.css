@@ -80,11 +80,17 @@ h2, h3, h4{
 
 .movie-title{
   color: rgb(32, 32, 32);
+  height: 2.5em;
 }
 
 .movie-poster{
   width: 100%;
   border-radius: 10px 10px 0 0;
+}
+
+.movie-poster-crop{
+  height: 15em;
+  overflow: hidden;
 }
 
 .movie-desc{
