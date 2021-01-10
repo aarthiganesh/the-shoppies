@@ -8,12 +8,9 @@ const SearchResults = (props) => {
 	var isInNominations = false;
 
 	function NominateButton (props){
-		for(var i=0;i<nominations.length; i++){
-			console.log(nominations[i]);
-			if(nominations[i].imdbID===props.movie.imdbID){
-				isInNominations = true;
-			}
-		}
+		console.log (props)
+		var isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!=0;
+
 		if(!isInNominations){
 			return(
 				<button

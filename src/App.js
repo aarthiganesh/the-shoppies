@@ -49,15 +49,9 @@ function App() {
 		console.log(!nominations.includes(movie));
 
 		//Brute force .includes() method
-		
-		var isInNominations = false;
 
-		for(var i=0;i<nominations.length; i++){
-			console.log(nominations[i]);
-			if(nominations[i].imdbID===movie.imdbID){
-				isInNominations = true;
-			}
-		}
+		var isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!=0;
+
 		if(!isInNominations){
 			const newNominationList = [...nominations, movie];
 			setNominations(newNominationList);
@@ -78,10 +72,10 @@ function App() {
 
   return (
     <div className="App">
+      <section className="search">
 			<header>
       	<h1>The Shoppies</h1>
 			</header>
-      <section className="search">
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
 			</section>
 			<div id="test">
