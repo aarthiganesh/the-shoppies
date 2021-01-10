@@ -28,17 +28,20 @@ const SearchResults = (props) => {
 		<>
 			{props.movies.map((movie,index) => (
 				<div className="movie">
-					<h4 class="movie-title"> 
-						{movie.Title} 
-					</h4>
-					<p>
-						{movie.Year}
-				</p>
-					<NominateButton nominations={nominations} movie={movie} handleNominateClick={props.handleNominateClick}/>
-					{/* <button
-						name={movie.Title}
-						onClick={() => props.handleNominateClick(movie)}
-					>Nominate</button> */}
+					<img src = {`http://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
+					alt={movie.Title} 
+					className="movie-poster"
+					// onError = {this.src=`img/fill.png`}
+					/>
+					<div className="movie-desc">
+						<h4 class="movie-title"> 
+							{movie.Title} 
+						</h4>
+						<p>
+							{movie.Year}
+						</p>
+						<NominateButton nominations={nominations} movie={movie} handleNominateClick={props.handleNominateClick}/>
+					</div>
 				</div>
 			))}
 		</>

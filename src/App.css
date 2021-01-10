@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Karla:wght@300;400&display=swap');
 
 .App {
   padding:0;
@@ -7,6 +8,11 @@
   background-color: #F6F6FA;
 }
 
+header{
+  text-align: center;
+}
+
+/* Text */
 h1{
   font-family: 'Permanent Marker';
   color: white;
@@ -16,15 +22,14 @@ h1{
 }
 
 h2, h3, h4{
-  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
 }
 
-header{
-  text-align: center;
-}
-
+/* Search */
 .search{
-  background: #528AFA;
+  background: black;
   text-align: center;
   padding: 100px 0 100px 0;
 }
@@ -44,15 +49,25 @@ header{
   width: 100%;
 }
 
+#search-bar{
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 500px;
+  border: none;
+  width: 50%;
+  letter-spacing: 3px;
+}
+
 #test{
   display: flex;
 }
-
+/* Movie Card */
 .movie{
   background-color: white;
   width: 28%;
   border-radius: 10px;
-  padding: 10px;
   margin: 1%;
   text-align: center;
   block-size: fit-content;
@@ -66,6 +81,17 @@ header{
 .movie-title{
   color: rgb(32, 32, 32);
 }
+
+.movie-poster{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.movie-desc{
+  padding: 10px;
+}
+
+/* Buttons */
 
 .btn-nominate{
   padding:10px;
@@ -90,19 +116,6 @@ header{
   cursor: pointer;
 }
 
-
-
-#search-bar{
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  width: 50%;
-}
-
-.section-title{
-  width: 100%;
-}
-
 .btn-remove{
   padding: 10px;
   color: #ffffff;
@@ -118,6 +131,14 @@ header{
   background-color: rgb(199, 54, 54);
 }
 
+.section-title{
+  width: 100%;
+}
+
+
+
+/* Navbar */
+
 nav{
   margin: 20px 0 20px 0;
   text-align: center;
@@ -125,7 +146,12 @@ nav{
 
 .nav-link{
   padding: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: x-small;
+  text-transform: uppercase;
   background-color: transparent;
   border: none;
-  border-bottom: #528AFA solid 3px;
+  border-bottom: black solid 3px;
+  border-radius: none;
 }
