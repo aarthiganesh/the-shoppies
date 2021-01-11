@@ -14,6 +14,7 @@ header{
 }
 
 .indicator-nominated{
+  cursor: pointer;
   position: fixed;
   top: 1em;
   right: 1em;
@@ -22,11 +23,12 @@ header{
   padding: 5px 10px;
   color: #ffffff;
   background-color: #1DE883;
+  box-shadow: rgba(136, 136, 136, 0.05) 5px 5px 10px;
 }
 
 .indicator-nominated:focus{
   outline: none;
-  cursor: npm install react-icons --save;
+  box-shadow: rgba(136, 136, 136, 0.15) 8px 8px 10px;
 }
 
 /* Text */
@@ -73,7 +75,6 @@ h4{
 }
 
 #search-bar{
-  /* font-family: 'Josefin Sans', sans-serif; */
   font-weight: 400;
   text-transform: uppercase;
   padding: 20px;
@@ -85,7 +86,7 @@ h4{
 }
 
 #search-bar:focus{
-  border: #1DE883 solid 5px;
+  border: #1DE883 solid 3px;
   outline: none;
 }
 
@@ -141,25 +142,21 @@ button{
 .btn-toggle {
   background-color: transparent;
   border: none;
-  border: #0cc267 solid 3px;
+  border: #1DE883  solid 3px;
   color: #000000;
   padding: 10px;
   transition: background-color 400ms ease-in-out;
 }
 
 .btn-toggle:hover{
-  background-color: #0cc267;
+  background-color: #1DE883;;
   color: #ffffff;
 }
 
 .btn-toggle:disabled{
-  background-color: #0cc267;
-  color: #ffffff;
-}
-
-.btn-toggle:focus{
   outline: none;
-  border-color: #048645;
+  background-color:  #1DE883 ;
+  color: white;
 }
 
 #btn-search-results{
@@ -241,15 +238,20 @@ nav{
   color: white;
   background-color: rgb(248, 179, 101);
   text-align: center;
-  padding: 10px 0 10px 0;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
   margin: 0;
-  width: 100vw;;
-  position: fixed;
   display: none;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  text-align: left;
+  max-width: 50vw;
 }
 
 #nomination-limit-banner p{
   margin: 0;
   letter-spacing: 1px;
   font-weight: 400;
+  padding-right: 5px;
 }

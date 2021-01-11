@@ -56,7 +56,7 @@ function App() {
 		let isInNominations= nominations.filter(nomination => nomination.imdbID===movie.imdbID).length!==0;
 
 		if(nominations.length===5){
-			document.getElementById("nomination-limit-banner").style.setProperty('display','block');
+			document.getElementById("nomination-limit-banner").style.setProperty('display','flex');
 		}else{
 			if(!isInNominations){
 				const newNominationList = [...nominations, movie];
@@ -78,7 +78,6 @@ function App() {
 
   return (
     <div className="App">
-			<NominationLimitBanner />
 			{
 				nominations.length>0?
 					<button className="indicator-nominated" onClick={()=>set(false)}><BsAwardFill /> {nominations.length}</button>:''
@@ -92,6 +91,7 @@ function App() {
 				<p id="tagline">Nominate your 5 favourite movies for The Shoppies!</p>
 				
 			</section>
+			<NominationLimitBanner />
 			<nav>
 					<button
 						id="btn-search-results"
