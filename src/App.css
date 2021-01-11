@@ -130,7 +130,8 @@ h4{
 .btn-nominate{
   padding:10px;
   color: white;
-  background-color: #528AFA;
+  background-color:#1DE883;
+  ;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -138,12 +139,12 @@ h4{
 }
 
 .btn-nominate:hover, .btn-nominate:focus{
-  background-color: #2a6ae9;
+  background-color: #0cc267;
 }
 
 .btn-nominate-disabled{
   padding: 10px;;
-  color: #528AFA;
+  color: #1DE883;
   background-color: #eff4ff;
   border: none;
   border-radius: 10px;

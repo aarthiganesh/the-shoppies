@@ -10,7 +10,8 @@ import NominationLimitBanner from './components/NominationLimitBanner';
 function App() {
 	const [movies, setMovies] = useState([]);
 	const [nominations, setNominations] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+	const [searchValue, setSearchValue] = useState('');
+	const [toggle, set] = useState(true)
   
   const getMovieRequest = async (searchValue) => {
 		const url = `https://www.omdbapi.com/?apikey=dd6d8910&type=movie&s=${searchValue}`;
@@ -72,8 +73,6 @@ function App() {
 		setNominations(newNominationList);
 		saveToLocalStorage(newNominationList);
 	};
-
-	const showContent =true;
 	
 
   return (
@@ -86,15 +85,26 @@ function App() {
 			</section>
 
 			<NominationLimitBanner />
+			<button
+				id="toggle-button"
+				onClick={()=>set(true)}
+			>Search Results</button>
+			<button
+				id="toggle-button"
+				onClick={()=>set(false)}
+			>Nominations ({nominations.length})</button>
 
 			<section id="test">
-				{showContent === true ? 
+
+				{toggle ? 
 					<SearchResultsPage 
 						movies = {movies}
 						addNomination = {addNomination}
 						nominations = {nominations}
 						searchValue = {searchValue}
-					/>:
+					/> 
+					// {document.getElementById('toggle-button').innerHTML('hallo')}
+					:
 
 					<NominatedMoviesPage 
 						nominations ={nominations}
