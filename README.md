@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to The Shoppies 2021!
+This React App was created for the Shopify Front-End Challenge for 2021. Check out the final app [HERE](the-shoppies-aarthi.vercel.app)
 
 ## Available Scripts
 
