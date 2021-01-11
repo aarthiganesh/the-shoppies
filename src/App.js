@@ -40,7 +40,9 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		if(nominations.length<6){
+		if(nominations.length===5){
+			document.getElementById("nominated-five").style.setProperty('display','flex');
+		}else if(nominations.length<6){
 			return () => {
 				document.getElementById("nomination-limit-banner").style.setProperty('display','none');
 			}
@@ -91,7 +93,8 @@ function App() {
 				<p id="tagline">Nominate your 5 favourite movies for The Shoppies!</p>
 				
 			</section>
-			<NominationLimitBanner />
+			<NominationLimitBanner id="nominated-five" content = "Thank you for nominating 5 movies!"/>
+			<NominationLimitBanner id="nomination-limit-banner" content ="You have already nominated 5 movies!"/>
 			<nav>
 					<button
 						id="btn-search-results"

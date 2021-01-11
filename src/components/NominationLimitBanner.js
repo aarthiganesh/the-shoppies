@@ -5,9 +5,9 @@ const NominationLimitBanner = (props) => {
 
   return(
     <>
-      <div id="nomination-limit-banner">
-        <p>You have already nominated 5 movies!</p>
-        <IoCloseSharp onClick={()=>document.getElementById("nomination-limit-banner").style.setProperty('display','none')}/>
+      <div id={props.id}>
+        <p>{props.content}</p>
+        <IoCloseSharp onClick={()=>document.getElementById(props.id).style.setProperty('display','none')}/>
       </div>
     </>
   );
