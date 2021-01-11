@@ -9,7 +9,7 @@ const SearchResultsPage = (props) => {
 					<h3 className="section-title">Search Results for '<span className="search-title">{props.searchValue}</span>'</h3>
 					<SearchResults
 							movies={props.movies}
-							handleNominateClick={props.addNomination}
+              handleNominateClick={props.addNomination}
 							nominations = {props.nominations}
 					/>
 				</section>

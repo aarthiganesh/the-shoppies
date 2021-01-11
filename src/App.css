@@ -75,6 +75,8 @@ h4{
   border: none;
   width: 50%;
   letter-spacing: 3px;
+  display: block;
+  margin: 0 0 20px 0;
 }
 
 .search-title{
@@ -127,11 +129,27 @@ h4{
 
 /* Buttons */
 
+button{
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-toggle {
+  background-color: transparent;
+  border: none;
+  border-bottom: #0cc267 solid 3px;
+  color: white;
+  padding: 10px;
+  transition: background-color 400ms ease-in-out;
+}
+
+.btn-toggle:hover{
+  background-color: #0cc267;
+}
+
 .btn-nominate{
   padding:10px;
   color: white;
   background-color:#1DE883;
-  ;
   border: none;
   border-radius: 10px;
   cursor: pointer;

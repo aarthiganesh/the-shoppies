@@ -16,7 +16,8 @@ const SearchResults = (props) => {
 		}else{
 			return (
 				<button disabled
-				className="btn-nominate-disabled">Nominated</button>
+				className="btn-nominate-disabled"
+				>Nominated</button>
 			)
 		}
 	}

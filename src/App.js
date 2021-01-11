@@ -82,17 +82,22 @@ function App() {
 					<h1>shoppies</h1>
 				</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
+				<span>
+					<button
+						id="btn-search-results"
+						className="btn-toggle"
+						onClick={()=>set(true)}
+					>Search Results</button>
+					<button
+						id="btn-view-nominations"
+						className="btn-toggle"
+						onClick={()=>set(false)}
+					>Nominations ({nominations.length})</button>
+				</span>
+				
 			</section>
 
 			<NominationLimitBanner />
-			<button
-				id="toggle-button"
-				onClick={()=>set(true)}
-			>Search Results</button>
-			<button
-				id="toggle-button"
-				onClick={()=>set(false)}
-			>Nominations ({nominations.length})</button>
 
 			<section id="test">
 
@@ -103,7 +108,6 @@ function App() {
 						nominations = {nominations}
 						searchValue = {searchValue}
 					/> 
-					// {document.getElementById('toggle-button').innerHTML('hallo')}
 					:
 
 					<NominatedMoviesPage 
