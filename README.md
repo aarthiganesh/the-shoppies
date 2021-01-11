@@ -1,7 +1,33 @@
 # Welcome to The Shoppies 2021!
 This React App was created for the Shopify Front-End Challenge for 2021. Check out the final app [HERE](the-shoppies-aarthi.vercel.app)
 
-## Available Scripts
+## Design Thinking
+This app was built with React and I wanted to challenge myself to not use a component library and build the components from scratch! 
+
+### Extra Features
+Your nominations will be saved to local storage, so they will remain even when the page is refreshed!
+## The Shoppies: Movie awards for entrepreneurs
+### The Challenge
+
+We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+
+We'd like a simple to use interface that makes it easy to:
+* Search OMDB and display the results (movies only)
+* Add a movie from the search results to our nomination list
+* View the list of films already nominated
+* Remove a nominee from the nomination list
+
+### Technical requirements
+Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+1. Each search result should list at least its title, year of release and a button to nominate that film.
+2. Updates to the search terms should update the result list
+3. Movies in search results can be added and removed from the nomination list.
+4. If a search result has already been nominated, disable its nominate button.
+5. Display a banner when the user has 5 nominations.
+
+
+
+# Available Scripts
 
 In the project directory, you can run:
 
@@ -38,32 +64,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
