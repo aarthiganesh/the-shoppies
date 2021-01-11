@@ -1,5 +1,5 @@
 # Welcome to The Shoppies 2021!
-This React App was created for the Shopify Front-End Challenge for 2021. Check out the final app [HERE](the-shoppies-aarthi.vercel.app)
+This React App was created for the Shopify Front-End Challenge for 2021. Check out the final app [HERE](https://the-shoppies-aarthi.vercel.app/)
 
 ## Design Thinking
 This app was built with React and I wanted to challenge myself to not use a component library and build the components from scratch! I also wanted to make the Web App as responsive as possible. 
