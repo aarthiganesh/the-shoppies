@@ -7,6 +7,7 @@
   padding:0;
   margin:0;
   background-color: #F4F6F8;
+  min-height: 100vh;
 }
 
 header{
@@ -160,7 +161,7 @@ button{
 .btn-nominate-disabled{
   padding: 5px 10px;
   color: #1DE883;
-  background-color: #eff4ff;
+  background-color: #ffffff;
   border: none;
   border-radius: 10px;
   cursor: pointer;

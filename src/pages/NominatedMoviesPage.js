@@ -1,5 +1,6 @@
 import React from 'react';
 import NominatedMovies from '../components/NominatedMovies';
+import gif from '../img/movies.gif'
 
 
 const NominatedMoviesPage = (props) => {
@@ -8,10 +9,15 @@ const NominatedMoviesPage = (props) => {
     <>
       	<section className="search-results">
 					<h3 className="section-title">Your Nominations ({props.nominations.length})</h3>
-					<NominatedMovies
-							movies={props.nominations}
-							handleNominateClick={props.removeNomination}
-					/>
+
+          {props.nominations.length===0?<><img src={gif} className="movie-gif"/></>:
+          <NominatedMovies
+          movies={props.nominations}
+          handleNominateClick={props.removeNomination}
+           />
+          }
+
+					
 				</section>
     </>
   );

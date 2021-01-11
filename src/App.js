@@ -73,8 +73,9 @@ function App() {
 		setNominations(newNominationList);
 		saveToLocalStorage(newNominationList);
 	};
-	
 
+
+	
   return (
     <div className="App">
 			<NominationLimitBanner />
