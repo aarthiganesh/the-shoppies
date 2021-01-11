@@ -28,7 +28,8 @@ const SearchResults = (props) => {
 				<div className="movie">
 					<div className="movie-poster-crop">
 						<img 
-						src = {`https://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
+						// src = {`https://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
+						src = {movie.Poster} 
 						alt={movie.Title} 
 						id={`${movie.imdbID}img`}
 						className="movie-poster" 

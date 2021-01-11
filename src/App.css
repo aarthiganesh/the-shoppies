@@ -42,7 +42,8 @@ h4{
 .search{
   background: black;
   text-align: center;
-  padding: 100px 0 100px 0;
+  padding: 3em 15px 3em 15px;
+
 }
 
 .search-results{
@@ -128,14 +129,27 @@ button{
 .btn-toggle {
   background-color: transparent;
   border: none;
-  border-bottom: #0cc267 solid 3px;
-  color: white;
+  border: #0cc267 solid 3px;
+  color: #000000;
   padding: 10px;
   transition: background-color 400ms ease-in-out;
 }
 
 .btn-toggle:hover{
   background-color: #0cc267;
+  color: #ffffff;
+}
+
+.btn-toggle:disabled{
+  background-color: #0cc267;
+  color: #ffffff;
+}
+
+#btn-search-results{
+  border-radius: 20px 0 0 20px;
+}
+#btn-view-nominations{
+  border-radius: 0 20px 20px 0;
 }
 
 .btn-nominate{

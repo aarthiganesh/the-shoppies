@@ -74,8 +74,6 @@ function App() {
 		saveToLocalStorage(newNominationList);
 	};
 
-
-	
   return (
     <div className="App">
 			<NominationLimitBanner />
@@ -85,20 +83,22 @@ function App() {
 				</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
 				<p id="tagline">Nominate your 5 favourite movies for The Shoppies!</p>
-				<span>
+				
+			</section>
+			<nav>
 					<button
 						id="btn-search-results"
 						className="btn-toggle"
 						onClick={()=>set(true)}
+						disabled ={toggle}
 					>Search Results</button>
 					<button
 						id="btn-view-nominations"
 						className="btn-toggle"
 						onClick={()=>set(false)}
+						disabled={!toggle}
 					>Nominations ({nominations.length})</button>
-				</span>
-				
-			</section>
+				</nav>
 
 			<section id="test">
 
