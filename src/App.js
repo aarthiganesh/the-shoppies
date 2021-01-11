@@ -6,6 +6,8 @@ import NominatedMoviesPage from './pages/NominatedMoviesPage';
 // Components
 import Search from './components/Search';
 import NominationLimitBanner from './components/NominationLimitBanner';
+//Icons
+import { BsAwardFill } from "react-icons/bs";
 
 function App() {
 	const [movies, setMovies] = useState([]);
@@ -77,6 +79,11 @@ function App() {
   return (
     <div className="App">
 			<NominationLimitBanner />
+			{
+				nominations.length>0?
+					<button className="indicator-nominated" onClick={()=>set(false)}><BsAwardFill /> {nominations.length}</button>:''
+			}
+		
       <section className="search">
 				<header>
 					<h1>shoppies</h1>
@@ -97,7 +104,7 @@ function App() {
 						className="btn-toggle"
 						onClick={()=>set(false)}
 						disabled={!toggle}
-					>Nominations ({nominations.length})</button>
+					>Nominated ({nominations.length})</button>
 				</nav>
 
 			<section id="test">
