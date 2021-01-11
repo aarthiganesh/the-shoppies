@@ -10,7 +10,7 @@ const NominatedMoviesPage = (props) => {
       	<section className="search-results">
 					<h3 className="section-title">Your Nominations ({props.nominations.length})</h3>
 
-          {props.nominations.length===0?<><img src={gif} className="movie-gif"/></>:
+          {props.nominations.length===0?<><img src={gif} alt ="movie gif" className="movie-gif"/></>:
           <NominatedMovies
           movies={props.nominations}
           handleNominateClick={props.removeNomination}
