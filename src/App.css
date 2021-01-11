@@ -118,12 +118,11 @@ h4{
 .movie-desc{
   padding: 10px;
   padding-bottom: 20px;
-  /* text-align: left; */
 }
 
-/* .movie-desc button{
-  float: right;
-} */
+.movie-gif{
+  width: 300px;
+}
 
 /* Buttons */
 
