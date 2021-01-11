@@ -77,11 +77,13 @@ function App() {
 
   return (
     <div className="App">
+			<NominationLimitBanner />
       <section className="search">
 				<header>
 					<h1>shoppies</h1>
 				</header>
         <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
+				<p id="tagline">Nominate your 5 favourite movies for The Shoppies!</p>
 				<span>
 					<button
 						id="btn-search-results"
@@ -96,8 +98,6 @@ function App() {
 				</span>
 				
 			</section>
-
-			<NominationLimitBanner />
 
 			<section id="test">
 

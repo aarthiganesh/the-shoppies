@@ -38,8 +38,7 @@ h4{
   padding-bottom: 20px;
 }
 #tagline{
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-style: 'Poppins', sans-serif;
   color: white;
 }
 
@@ -74,8 +73,6 @@ h4{
   border-radius: 500px;
   border: none;
   width: 50%;
-  letter-spacing: 3px;
-  display: block;
   margin: 0 0 20px 0;
 }
 
@@ -98,7 +95,6 @@ h4{
   block-size: fit-content;
   box-shadow: rgba(136, 136, 136, 0.05) 5px 5px 10px;
   transition: box-shadow 500ms ease-in-out;
-  min-width: 200px;
 }
 .movie:hover{
   box-shadow: rgba(136, 136, 136, 0.15) 8px 8px 10px;
@@ -120,6 +116,7 @@ h4{
 
 .movie-desc{
   padding: 10px;
+  padding-bottom: 20px;
   /* text-align: left; */
 }
 
@@ -147,7 +144,7 @@ button{
 }
 
 .btn-nominate{
-  padding:10px;
+  padding: 5px 10px;
   color: white;
   background-color:#1DE883;
   border: none;
@@ -161,7 +158,7 @@ button{
 }
 
 .btn-nominate-disabled{
-  padding: 10px;;
+  padding: 5px 10px;
   color: #1DE883;
   background-color: #eff4ff;
   border: none;
@@ -170,7 +167,7 @@ button{
 }
 
 .btn-remove{
-  padding: 10px;
+  padding: 5px 10px;
   color: #ffffff;
   background-color: rgb(221, 86, 86);
   border: none;
@@ -218,6 +215,8 @@ nav{
   text-align: center;
   padding: 10px 0 10px 0;
   margin: 0;
+  width: 100vw;;
+  position: fixed;
   display: none;
 }
 
