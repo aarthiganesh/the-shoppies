@@ -6,7 +6,7 @@ const SearchResultsPage = (props) => {
   return(
     <>
       <section className="search-results">
-					<h3 className="section-title">Search Results for '{props.searchValue}'</h3>
+					<h3 className="section-title">Search Results for '<span className="search-title">{props.searchValue}</span>'</h3>
 					<SearchResults
 							movies={props.movies}
 							handleNominateClick={props.addNomination}

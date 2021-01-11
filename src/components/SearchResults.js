@@ -3,9 +3,6 @@ import React from 'react';
 const SearchResults = (props) => {
 	const nominations = props.nominations;
 
-	//Brute force .includes() method
-		
-
 	function NominateButton (props){
 		let isInNominations= nominations.filter(nomination => nomination.imdbID===props.movie.imdbID).length!==0;
 
@@ -32,7 +29,9 @@ const SearchResults = (props) => {
 						<img 
 						src = {`https://img.omdbapi.com/?i=${movie.imdbID}&h=400&apikey=dd6d8910`} 
 						alt={movie.Title} 
-						className="movie-poster"
+						id={`${movie.imdbID}img`}
+						className="movie-poster" 
+						onError={console.log('not this one')}
 						/>
 					</div>
 					<div className="movie-desc">

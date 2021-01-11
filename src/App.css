@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Karla:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 
 .App {
   padding:0;
   margin:0;
-  background-color: #F6F6FA;
+  background-color: #F4F6F8;
 }
 
 header{
@@ -14,17 +15,20 @@ header{
 
 /* Text */
 h1{
-  font-family: 'Permanent Marker';
+  /* font-family: 'Permanent Marker'; */
+  font-family: 'Ubuntu', sans-serif;
   color: white;
   font-size: 55px;
   padding: 0;
-  margin: 0;
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 
 h4{
   /* font-family: 'Josefin Sans', sans-serif; */
   /* font-family: 'Karla', sans-serif; */
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 #instructions{
@@ -35,7 +39,8 @@ h4{
 }
 #tagline{
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: white;
 }
 
 /* Search */
@@ -46,14 +51,14 @@ h4{
 }
 
 .search-results{
-  width: 100vw;
-  max-width: 1000px;
+  width: 90vw;
+  background-color:#F4F6F8;
   display: flex;
   flex-wrap: wrap;
-  padding: 1%;
+  padding: 15px;
 
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content:center;
   align-content: flex-start;
 }
 
@@ -72,13 +77,19 @@ h4{
   letter-spacing: 3px;
 }
 
+.search-title{
+  text-transform: uppercase;
+  color: #1DE883;
+}
+
 #test{
   display: flex;
+  justify-content: center;
 }
 /* Movie Card */
 .movie{
   background-color: white;
-  width: 28%;
+  width: 200px;
   border-radius: 10px;
   margin: 1%;
   text-align: center;
@@ -156,6 +167,7 @@ h4{
 
 .section-title{
   width: 100%;
+  text-align: center;
 }
 
 
