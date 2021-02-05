@@ -34,7 +34,7 @@ const SearchResults = (props) => {
 						id={`${movie.imdbID}img`}
 						className="movie-poster" 
 						onError={console.log('not this one')}
-						/>
+					/>
 					</div>
 					<div className="movie-desc">
 						<h4 class="movie-title"> 

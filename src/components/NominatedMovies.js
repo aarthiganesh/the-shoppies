@@ -11,7 +11,7 @@ const NominatedMovies = (props) => {
 						src = {movie.Poster} 
 						alt={movie.Title} 
 						className="movie-poster"
-						/>
+					/>
 					</div>
 					<div className="movie-desc">
 						<h4 class="movie-title"> 
